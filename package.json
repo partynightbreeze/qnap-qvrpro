@@ -1,0 +1,37 @@
+{
+   "name": "@scrypted/qnap-qvrpro",
+   "version": "0.0.1",
+   "scripts": {
+      "prepublishOnly": "NODE_ENV=production scrypted-webpack",
+      "prescrypted-vscode-launch": "scrypted-webpack",
+      "scrypted-vscode-launch": "scrypted-deploy-debug",
+      "scrypted-deploy-debug": "scrypted-deploy-debug",
+      "scrypted-debug": "scrypted-debug",
+      "scrypted-deploy": "scrypted-deploy",
+      "scrypted-webpack": "scrypted-webpack"
+   },
+   "keywords": [
+      "scrypted",
+      "plugin",
+      "qnap",
+      "qvr"
+   ],
+   "scrypted": {
+      "name": "QNAP QVR Pro",
+      "type": "DeviceProvider",
+      "interfaces": [
+         "DeviceProvider",
+         "Settings"
+      ]
+   },
+   "dependencies": {
+      "@types/xml2js": "^0.4.9",
+      "axios": "^0.24.0",
+      "fast-xml-parser": "^4.0.9"
+   },
+   "devDependencies": {
+      "@scrypted/common": "file:../../common",
+      "@scrypted/sdk": "file:../../sdk",
+      "@types/node": "^16.6.1"
+   }
+}
